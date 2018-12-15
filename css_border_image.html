@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>zhangqi_file</title>
+	<style>
+		html,body{
+			padding: 0;
+			margin: 0;
+		}
+		.main{
+			width: 600px;
+			height: 300px;
+			border: 1px solid #00d5ff;
+			background: #ccc;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+    		justify-content: center;
+		}
+		.box{
+		    width: 27px;
+		    height: 27px;
+		    border: 27px solid;
+		    border-image: url(./images/box.png) 27 27 27 27 stretch;
+		    background: #c00f73;
+		}
+		.box_a{
+		    border-image: url(./images/box.png) 27 27 27 27 fill stretch;
+		}
+		.box_b{
+			width: 81px;
+			height: 81px;
+		    border-image: url(./images/box.png) 27 27 27 27 fill stretch;
+		}
+		.box_c{
+		    border-image: url(./images/box.png) 27 27 27 27 fill repeat;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="box"></div>
+	</div>	
+	<div class="main">
+		<div class="box box_a"></div>
+	</div>	
+	<div class="main">
+		<div class="box box_b"></div>
+	</div>	
+	<div class="main">
+		<div class="box box_b box_c"></div>
+	</div>	
+</body>
+<script></script>
+</html>

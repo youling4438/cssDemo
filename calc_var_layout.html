@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>zhangqi_file</title>
+	<style>
+		*{
+			margin: 0;
+			margin: 0;
+			font-family: Source Code Pro,Microsoft YaHei;
+		}
+		.body{
+			background: #ddd;
+			min-width: 320px;
+			margin:0 auto;
+			overflow: hidden;
+			width: 80%;
+		}
+		.body{
+			--col:4;
+			--margins: calc(48px / var(--col));
+			--space: calc(4px * var(--col));
+			--fontSize: calc(20px - 4 / var(--col));
+		}
+		@media screen and (max-width: 1200px) {
+		    .body {
+		        --col: 3;
+		    }
+		}
+		@media screen and (max-width: 900px) {
+		    .body {
+		        --col: 2;
+		    }
+		}
+		@media screen and (max-width: 600px) {
+		    .body {
+		        --col: 1;
+		    }
+		}
+		.block{
+			width: calc((100% - var(--margins) * var(--columns) * 2) / var(--columns));
+			margin: var(--margins);
+			box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+			background-color: #f0f3f9;
+			float: left;
+		}
+		.block{
+			text-align: center;
+			background: currentColor;
+		}
+		.block .title{
+			color:#fff;
+		    padding: var(--space);
+		    font-size: var(--fontSize);
+		}
+		.block .content{
+			height: 150px;
+			padding: var(--space);
+			font-size: var(--fontSize);
+			background: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="body">
+		<h1>Miracles sometimes occur, but one has to work terribly for them.</h1>
+		<div class="block" style="color: #a78e44;">
+			<div class="title">乌金</div>
+			<div class="content">Miracles sometimes occur,</div>
+		</div>
+		<div class="block" style="color: #ffa400;">
+			<div class="title">橙黄</div>
+			<div class="content">but one has to work terribly for them.</div>
+		</div>
+		<div class="block" style="color: #a3d900;">
+			<div class="title">葱黄</div>
+			<div class="content">Miracles sometimes occur,</div>
+		</div>
+		<div class="block" style="color: #ff4777;">
+			<div class="title">洋红</div>
+			<div class="content">but one has to work terribly for them.</div>
+		</div>
+		<div class="block" style="color: #177cb0;">
+			<div class="title">靛青</div>
+			<div class="content">Miracles sometimes occur, but one has to work terribly for them.</div>
+		</div>
+	</div>
+</body>
+</html>

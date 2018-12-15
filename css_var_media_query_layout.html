@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style>
+		.main{
+			width: 80%;
+			min-width: 320px;
+			margin: auto;
+			overflow: hidden;
+			font-family: Source Code Pro,Microsoft YaHei;
+		}
+		.main{
+			--col:4;
+			--mar:calc(24px / var(--col));
+			--pad:calc(4px * var(--col));
+			--fSize:calc(20px - 4 / var(--col));
+		}
+		h2{
+			margin: 5px;
+		}
+		.cell{
+			text-align: center;
+		}
+		@media screen and (max-width:1200px){
+			.main{
+				--col:3;
+			}
+		}
+		@media screen and (max-width:900px){
+			.main{
+				--col:2;
+			}
+		}
+		@media screen and (max-width:600px){
+			.main{
+				--col:1;
+			}
+		}
+		.cell{
+			width:calc((100%- var(--mar)*var(--col)*2)/var(--col));/* 注意calc()内部变量var与减号之间要有空格*/
+			margin:var(--mar);
+			box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+		    background-color: #f0f3f9;
+		    float: left;
+		}
+		.chead{
+			background: currentColor;
+		}
+		.ctitle{
+			color:#fff;
+			padding: var(--pad);
+			font-size: var(--fSize);
+		}
+		.content{
+			padding:var(--pad);
+			font-size: var(--fSize);
+			height: 30px;
+		}
+	</style>
+	<title>zhangqi_file</title>
+</head>
+<body>
+	<div class="main">
+		<h2>这是CSS3变量配合CSS3函数calc()实现响应式布局实例</h2>
+		<div class="cell" style="color:#758a99">
+			<div class="chead">
+				<div class="ctitle">墨灰</div>
+			</div>
+			<div class="content">我是个对自己颜值很自信的人，每天叫醒我起床的不是闹钟</div>
+			<img src="images/17.png">
+		</div>
+		<div class="cell" style="color:#789262">
+			<div class="chead">
+				<div class="ctitle">竹青</div>
+			</div>
+			<div class="content">也不是梦想，而是自己的颜值</div>
+			<img src="images/12.png">
+		</div>
+		<div class="cell" style="color:#549688">
+			<div class="chead">
+				<div class="ctitle">铜绿</div>
+			</div>
+			<div class="content">每每想到我长得如此俊俏，都会从梦中笑醒</div>
+			<img src="images/9.png">
+		</div>
+		<div class="cell" style="color:#b0a4e3">
+			<div class="chead">
+				<div class="ctitle">雪青</div>
+			</div>
+			<div class="content">但是，人在江湖飘，哪有不挨刀</div>
+			<img src="images/1.png">
+		</div>
+		<div class="cell" style="color:#425066">
+			<div class="chead">
+				<div class="ctitle">黛蓝</div>
+			</div>
+			<div class="content">经常出入一些社交场合，难免和和其他的人和物一起照个相什么的</div>
+			<img src="images/18.png">
+		</div>
+		<div class="cell" style="color:#9b4400">
+			<div class="chead">
+				<div class="ctitle">棕红</div>
+			</div>
+			<div class="content">如果和我合影的是迪丽热巴这样的美女也就算了</div>
+			<img src="images/10.png">
+		</div>	
+		<div class="cell" style="color:#494931">
+			<div class="chead">
+				<div class="ctitle">缁色</div>
+			</div>
+			<div class="content">但经常在我左右的都是大老爷们</div>
+			<img src="images/13.png">
+		</div>	
+		<div class="cell" style="color:#f00056">
+			<div class="chead">
+				<div class="ctitle">品红</div>
+			</div>
+			<div class="content">有时候，甚至还有其他完全不知形象为何物的汪科物种</div>
+			<img src="images/14.png">
+		</div>	
+	</div>	
+</body>
+<script></script>
+</html>

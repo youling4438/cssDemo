@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>zhangqi_file</title>
+	<style>
+		*{
+			font-family: Source Code Pro,Microsoft YaHei;
+			font-size: 25px;
+			text-align: center;
+			color: var(--color);
+		}
+		.one{ 
+			--color: purple; 
+		}
+		.one div{ 
+			--color: green; 
+		}
+		#alert{ 
+			--color: red; 
+		}
+		.two{
+			--he:200;
+			height: calc(var(--he)*1px); /*CSS变量的空格尾随特性*/
+			--wi:1200px;
+			width: var(--wi);
+			margin: 0 auto;
+			padding:5px;
+			text-align: center;
+			--co:#b0a4e3;
+			color: var(--co);
+			--bo:var(--co);  /*CSS变量的相互传递特性*/
+			border:2px solid var(--bo);
+		}
+	</style>
+</head>
+<body>
+	<div class="one">
+		<p>我的紫色继承于根元素</p>
+		<div>我的绿色来自直接设置</div>
+		<div id='alert'>
+			ID选择器权重更高，因此阿拉是红色！
+			<p>我也是红色，占了继承的光</p>
+		</div>
+	</div>
+	<div class="two">
+		Miracles sometimes occur, but one has to work terribly for them.Miracles sometimes occur, but one has to work terribly for them.Miracles sometimes occur, but one has to work terribly for them.Miracles sometimes occur, but one has to work terribly for them.
+	</div>
+</body>
+</html>

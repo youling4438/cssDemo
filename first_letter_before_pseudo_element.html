@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<style>
+		.main{
+			font-family: Source Code Pro,Microsoft YaHei;
+			text-align: left;
+			font-size: 18px;
+			font-weight: 500;
+			width: 80%;
+			margin: 0 auto;
+			background: #ccc;
+		}
+		.news:before{
+			content:"我对";
+		}
+		.news:first-letter{
+			color:#ff0097;
+		}
+		.tip{
+			color:#ff0097;
+			font-weight: 500;
+		}
+	</style>
+	<title>zhangqi_file</title>
+</head>
+<body>
+	<div class="main">
+		<h2>::first-letter简单的小实例</h2>
+		<h4>before()伪类元素也可以作为::first-letter伪元素存在</h4>
+		<pre>
+			.news:before{
+				content:"我对";
+			}
+			.news:first-letter{
+				color:#ff0097;
+			}
+		</pre>
+		<div class="news">你好，不是让你蹬鼻子上脸的</div>
+	</div>
+</body>
+</html>

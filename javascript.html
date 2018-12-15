@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>zhangqi_file</title>
+	<style>
+		html,body{
+			padding: 0;
+			margin: 0;
+		}
+		.main{
+			width: 600px;
+			padding: 10px;
+			border: 1px solid #00d5ff;
+			background: #ccc;
+			margin: 0 auto;
+		}
+		.box{
+			width: 200px;
+			height: 150px;
+			margin: 5px;
+			border: 20px solid #00d5ff;
+			float: left;
+		}
+		.a{
+			border-radius: 4px;
+		}
+		.b{
+			border-radius: 4px 6px 6px 4px;
+		}
+		.c{
+			border-radius:  5px 5px 3px 2px / 5px 5px 1px 3px;
+		}
+		.clearfix{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="box a"></div>
+		<div class="box b"></div>
+		<div class="box c"></div>
+		<div class="box c"></div>
+		<div class="box c"></div>
+		<div class="box c"></div>
+		<div class="box c"></div>
+		<div class="clearfix"></div>
+	</div>	
+</body>
+<script>
+	var a = [];
+	for (let i = 0; i < 10; i++) {
+	  a[i] = function () {
+	    console.log(i);
+	  };
+	}
+	a[1]();
+	var b = [];
+	for (var j = 0; j < 10; j++) {
+	  b[j] = function () {
+	    console.log(j);
+	  };
+	}
+	b[1]();
+	function iteratorFactory(i){
+    var onclick = function(e){
+	        console.log(i)
+	    }
+	    return onclick;
+	}
+	var clickBoxs = document.querySelectorAll('.box');
+	for (var i = 0; i < clickBoxs.length; i++){
+	    clickBoxs[i].onclick = iteratorFactory(i)
+	}
+</script>
+</html>

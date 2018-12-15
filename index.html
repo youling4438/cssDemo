@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<style>
+		.main{
+			font-family: Source Code Pro,Microsoft YaHei;
+			text-align: left;
+			font-size: 18px;
+			font-weight: 500;
+			width: 80%;
+			margin: 0 auto;
+			background: #ccc;
+			height: 400px;
+		}	
+		.book{
+			padding-top: 200px;
+			margin:0 auto;
+			font-family: Source Code Pro,Microsoft YaHei;
+			font-size: 18px;
+		}
+		dot{
+			display: inline-block; 
+		    height: 1em; 
+		    line-height: 1;
+		    vertical-align: -.25em;
+		    overflow: hidden;
+		}
+		dot::before{
+			display: block;
+		    content: '...\A..\A.';
+		    white-space: pre-wrap;
+		    animation: dot 3s infinite step-start both;
+		}
+		@keyframes dot{
+			33% { transform: translateY(-2em);}
+			66% { transform: translateY(-1em);}
+		}
+	</style>
+	<title>zhangqi_file</title>
+</head>
+<body>
+	<div class="main">
+		<div class="book">订单提交中<dot>...</dot></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<style>
+		.main{
+			font-family: Source Code Pro,Microsoft YaHei;
+			text-align: left;
+			font-size: 18px;
+			font-weight: 500;
+			width: 80%;
+			margin: 0 auto;
+			background: #ccc;
+		}
+		.horseRun {
+			position: absolute;
+		    /* 之前语法 始于2015年9月，M58版本会移除，大约2017年4月 */
+		    motion-path: path("M10,80 q100,120 120,20 q140,-50 160,0");
+		     
+		    /* 当前规范上的语法 2016年12月支持 */
+		    offset-path: path("M10,80 q100,120 120,20 q140,-50 160,0");
+
+		    animation: move 3s linear infinite;
+		}
+		@keyframes move {
+		  /* 之前语法 */
+		  100% { motion-offset: 100%;}
+		  /* 当前规范语法 */
+		  100% { offset-distance: 100%;}
+		}	
+		.ask{
+			color:#b0a4e3;
+			font-family: Source Code Pro,Microsoft YaHei;
+			font-size: 25px;
+			font-weight: 700;
+			text-shadow: 2px 2px 2px #6b6882; 
+		}
+	</style>
+	<title>zhangqi_file</title>
+</head>
+<body>
+	<div class="main">
+		<img src="images/horse.png" width="40" height="43" class="horseRun">
+		<svg width="280" height="150" viewBox="0 0 280 150">
+		    <path d="M10,80 q100,120 120,20 q140,-50 160,0" stroke="#cd0000" stroke-width="2" fill="none" />
+		</svg>
+		<div class="ask">马跑起来了没有？</div>
+	</div>
+</body>
+</html>

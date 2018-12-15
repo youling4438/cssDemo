@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<style>
+		.main{
+			font-family: Source Code Pro,Microsoft YaHei;
+			text-align: left;
+			font-size: 18px;
+			font-weight: 500;
+			width: 50%;
+			margin: 0 auto;
+			background: #ccc;
+		}
+		.content:first-letter{
+			margin: 40px auto;
+			display: block;
+			color:#549688;	
+			font-size: 25px;
+		}
+	</style>
+	<title>zhangqi_file</title>
+</head>
+<body>
+	<div class="main">
+		<h2>:first-letter简单的小实例</h2>
+		<h4>选择之后看下面每一段话第一个字有没有变颜色和大小</h4>
+		<select id="selid">
+			<option value="inline">inline</option>
+			<option value="block" selected>block</option>
+			<option value="inline-block">inline-block</option>
+			<option value="flex">flex</option>
+			<option value="table">table</option>
+			<option value="table-cell">table-cell</option>
+			<option value="table-row">table-row</option>
+			<option value="table-caption">table-caption</option>
+			<option value="inline-table">inline-table</option>
+			<option value="list-item">list-item</option>
+		</select>
+		<div class="h2">display: <span id="sid">block</span></div>
+		<div class="content">我是个对自己颜值很自信的人，每天叫醒我起床的不是闹钟</div>
+		<div class="content">也不是梦想，而是自己的颜值</div>
+		<div class="content">每每想到我长得如此俊俏，都会从梦中笑醒</div>
+		<div class="content">但是，人在江湖飘，哪有不挨刀</div>
+		<div class="content">经常出入一些社交场合，难免和和其他的人和物一起照个相什么的</div>
+		<div class="content">如果和我合影的是迪丽热巴这样的美女也就算了</div>
+		<div class="content">但经常在我左右的都是大老爷们</div>
+		<div class="content">有时候，甚至还有其他完全不知形象为何物的汪科物种</div>
+	</div>
+</body>
+<script>
+	$("#selid").change(function(){
+		var val=this.value;
+		$("#sid").html(val);
+		$(".content").css("display",val);
+	});
+</script>
+</html>
